@@ -1,0 +1,18 @@
+# logs 폴더 무시
+humidSensor/logs/
+*.log
+
+# Python 캐시
+__pycache__/
+*.pyc
+
+# VS Code 설정
+.vscode/
+
+# OS 임시파일
+.DS_Store
+Thumbs.db
+
+# 에디터 백업파일
+*~
+*.swp

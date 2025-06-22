@@ -1,0 +1,23 @@
+Temp=28.0C, Humidity=64.0%
+Temp=28.0C, Humidity=64.0%
+Temp=28.0C, Humidity=64.0%
+Traceback (most recent call last):
+  File "/home/pi/Desktop/humidSensor/humidSensorTest.py", line 20, in <module>
+    cursor.execute(
+  File "/home/pi/.local/lib/python3.9/site-packages/mysql/connector/cursor.py", line 418, in execute
+    self._connection.cmd_query(
+  File "/home/pi/.local/lib/python3.9/site-packages/mysql/connector/opentelemetry/context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+  File "/home/pi/.local/lib/python3.9/site-packages/mysql/connector/_decorating.py", line 89, in handle_cnx_method
+    raise err
+  File "/home/pi/.local/lib/python3.9/site-packages/mysql/connector/_decorating.py", line 85, in handle_cnx_method
+    return cnx_method(cnx, *args, **kwargs)
+  File "/home/pi/.local/lib/python3.9/site-packages/mysql/connector/connection.py", line 984, in cmd_query
+    result = self._handle_result(
+  File "/home/pi/.local/lib/python3.9/site-packages/mysql/connector/_decorating.py", line 89, in handle_cnx_method
+    raise err
+  File "/home/pi/.local/lib/python3.9/site-packages/mysql/connector/_decorating.py", line 85, in handle_cnx_method
+    return cnx_method(cnx, *args, **kwargs)
+  File "/home/pi/.local/lib/python3.9/site-packages/mysql/connector/connection.py", line 745, in _handle_result
+    raise get_exception(packet)
+mysql.connector.errors.DatabaseError: 1927 (70100): Connection was killed
