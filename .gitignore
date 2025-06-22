@@ -16,3 +16,4 @@ Thumbs.db
 # 에디터 백업파일
 *~
 *.swp
+secure_config.py

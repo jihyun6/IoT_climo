@@ -1,19 +1,19 @@
+import sys
+import os
+import time
+import mysql.connector
 from flask import Flask, jsonify
 from flask_cors import CORS
-import mysql.connector
-import time
+
+# secure_config 모듈 경로 추가 (부모 폴더 기준)
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from secure_config import db_config
+
 #import humidSensorTest
 
 app = Flask(__name__)
 CORS(app)
 
-# DB 연결 정보
-db_config = {
-    'host':'localhost',
-    'user':'root',
-    'password':'1587',
-    'database':'IOT01'
-}
 
 @app.route('/')
 def home():
