@@ -1,16 +1,23 @@
+import sys
+import os
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 import Adafruit_DHT
 import mysql.connector
 import time
+
+from secure_config import db_config
 
 sensor = Adafruit_DHT.DHT11
 pin = 4
 print("[BOOT] humidSensor 시작됨",flush=True)
 try:
     conn = mysql.connector.connect(
-        host="192.168.45.171",
-        user="root",
-        password ="1587",
-        database="IOT01"
+        host=db_config["host"],
+        user=db_config["user"],
+        password=db_config["password"],
+        database=db_config["database"]
     )
 
     
