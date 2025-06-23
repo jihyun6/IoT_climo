@@ -1,6 +1,9 @@
 # logs 폴더 무시
 humidSensor/logs/
+mtnDtcCam/capture_logs/
 *.log
+
+
 
 # Python 캐시
 __pycache__/
