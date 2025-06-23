@@ -23,13 +23,13 @@ try:
                 filename = f"/home/pi/Desktop/capture_{timestamp}.jpg"
                 
                 os.system(f"libcamera-still -t 2000 --preview --autofocus-on-capture -o {filename}")
-                print(f"✅ 사진 저장 완료: {filename}")
+                print(f"사진 저장 완료: {filename}")
                 detected_time = None  # 다음 감지를 위해 초기화
                 time.sleep(5)  # 중복 방지를 위해 5초 대기
 
         else:
             if detected_time is not None:
-                print("🙅 감지 취소 (사람 사라짐)")
+                print("감지 취소 (사람 사라짐)")
             detected_time = None
 
         time.sleep(0.2)

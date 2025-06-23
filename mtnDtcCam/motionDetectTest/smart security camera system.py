@@ -5,7 +5,7 @@ from datetime import datetime
 
 # GPIO 설정
 PIR_PIN = 17
-#보드에 적힌거랑 같은 번호로 연결
+
 #BCM은 Broadcom 칩 기준 번호 체계로 GPIO 17이면 실제 보드의 핀 번호 11에 해당
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(PIR_PIN, GPIO.IN)
