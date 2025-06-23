@@ -17,3 +17,4 @@ Thumbs.db
 *~
 *.swp
 secure_config.py
+*.xml
