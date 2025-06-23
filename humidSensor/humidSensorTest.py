@@ -35,7 +35,7 @@ while True:
         print(f"[{now}] : Temp={temperature:.1f}C, Humidity={humidity:.1f}%",flush=True)
         
         cursor.execute(
-            "INSERT INTO temp_humid_log (temperature, humidity) VALUES (%s, %s)",
+            "INSERT INTO environment_log (envrm_temp, envrm_humid) VALUES (%s, %s)",
             (temperature, humidity)
         )
         conn.commit()
