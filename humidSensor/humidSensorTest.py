@@ -12,21 +12,25 @@ from secure_config import db_config
 sensor = Adafruit_DHT.DHT11
 pin = 4
 print("[BOOT] humidSensor 시작됨",flush=True)
+
+conn = None
 try:
     conn = mysql.connector.connect(
         host=db_config["host"],
         user=db_config["user"],
         password=db_config["password"],
         database=db_config["database"]
-    )
-
-    
+    )   
 
 except Exception as e:
     now = time.strftime('%Y-%m-%d %H:%M:%S')
     print(f"[{now}/Error] {e}")
 
-cursor= conn.cursor()    
+if conn is not None:
+    cursor= conn.cursor()   
+else:
+    print ("DB연결 실패로 프로그램 종료") 
+    exit()
 
 while True:
     humidity, temperature = Adafruit_DHT.read(sensor, pin)
