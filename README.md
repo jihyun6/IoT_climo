@@ -16,13 +16,13 @@
 | WAS   |Apache2|
 | DB & ORM   |MySql|
 | 프레임워크 |Flask|
-| 오픈 소스   |Open Wheather, Web Socket, ChartJS, Apache POI|
-| Sensor  | DHT11, Pir Sensor, QSenn usb camera|  
+| 오픈 소스   |Open CV, Open Wheather, Web Socket, ChartJS, Apache POI|
+| Sensor  | DHT11, Pir Sensor, QSENN QC4 camera|  
  
 
 
 ## 3️⃣  주요기능   
 DHT11 센서를 이용하여 온습도 수집  
-SONY IMX219(카메라)를 이용하여 사진 캡쳐  
+QSENN QC4K(usb 카메라)를 이용하여 사진 캡쳐  
 사진 데이터 분석 후 얼굴 인식 기반 개인 맞춤 안내  
 모션 트리거 기반 환경 기록  
